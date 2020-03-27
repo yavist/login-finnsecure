@@ -13,53 +13,47 @@
 </head>
 
 <body>
-    <header>
-        <h1>> Camera X - 25.03.2020_</h1>
+    <header class="typewriter">
+        <h1>Camera X - 25.03.2020</h1>
     </header>
     <main>
         <section>
-            <table>
+            <table id="cam-table">
                 <tr>
                     <th>file_name</th>
                     <th>date</th>
+                    <th>time</th>
                     <th>type</th>
                 </tr>
                 <tr>
-                    <td><a href="/map/pin-01.html">../back</a></td>
-                </tr>
-                <tr class="no-access">
-                    <td><a href="./cam-01/25/index.html">VID_00_00.mp4</a></td>
-                    <td>25.03.2020</td>
-                    <td>file</td>
-                </tr>
-                <tr class="no-access">
-                    <td>VID_01_00.mp4</td>
-                    <td>25.03.2020</td>
-                    <td>file</td>
-                </tr>
-                <tr class="no-access">
-                    <td>VID_02_00.mp4</td>
-                    <td>25.03.2020</td>
-                    <td>file</td>
-                </tr>
-                <tr class="no-access">
-                    <td>VID_03_00.mp4</td>
-                    <td>25.03.2020</td>
-                    <td>file</td>
-                </tr>
-                <tr class="no-access">
-                    <td>VID_04_00.mp4</td>
-                    <td>25.03.2020</td>
-                    <td>file</td>
+                    <td><a href="/map/pin-01.html">&lt; back</a>
+                    </td>
                 </tr>
             </table>
         </section>
     </main>
     <footer>
         <hr>
-        Access time in 13.4ms.
+        <table style="width: 100%;">
+            <tr>
+                <td id="access-time">Access time in 27.3ms.</td>
+                <td style="float: right;">finnsecure</td>
+            </tr>
+        </table>
     </footer>
 
+    <script src="/js/generate_cam_table.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", event => {
+            const randomTime = () => { let t = Math.random() * 100; return t.toFixed(2) }
+            document.getElementById("access-time").innerHTML = `Access time in ${randomTime()}ms`
+
+            generateCamTable("25.03.2020", {
+                // Format: [STUNDE DES VIDEOS]: [VIDEO DATEINAME]
+                1: "IMG_5090.MP4"
+            })
+        });
+    </script>
 </body>
 
 </html>

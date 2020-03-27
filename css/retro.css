@@ -37,3 +37,44 @@ a:hover {
   color: gray;
   cursor: not-allowed;
 }
+
+.typewriter {
+  display: inline-table;
+  width: fit-content;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  display: inline-block !important;
+  letter-spacing: 0.25rem;
+  animation: typing 2.5s steps(12, end), blink-caret 0.85s step-end infinite;
+}
+
+.typewriter h1::before {
+  content: "> ";
+}
+
+.typewriter h1::after {
+  content: "_";
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
