@@ -2,6 +2,7 @@
   --color: #3d6a78;
   --color-accent: #3d6a781f;
   --color-text: #333;
+  --width-content: 75vw;
 }
 
 body,
@@ -28,11 +29,52 @@ html {
 }
 
 main {
-  flex: 1 1 0%;
+  flex: 1 1 100%;
   margin: 0;
 }
 
 footer > * {
   text-align: var(--justify-important);
   color: var(--color-text-secondary);
+}
+
+.map-container {
+  width: 100%;
+}
+
+.map-container > figure {
+  position: relative;
+}
+
+.pin {
+  width: 2%;
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -90%);
+  transition: all 0.1s ease;
+}
+
+.pin:hover {
+  transform: translate(-50%, -95%) scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .pin {
+    width: 6%;
+  }
+
+  :root {
+    --width-content: 100vw;
+  }
+
+  .map-container {
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
