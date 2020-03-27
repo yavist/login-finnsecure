@@ -1,0 +1,36 @@
+:root {
+  --color: #3d6a78;
+  --color-accent: #3d6a781f;
+  --color-text: #333;
+}
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+}
+
+.full-width-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.full-width {
+  flex-shrink: 0;
+  padding: 1.25rem;
+  background: var(--color-accent);
+  min-width: 100%;
+  text-align: var(--justify-normal);
+  min-height: 70px;
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 1 0%;
+}
+
+footer > * {
+  text-align: var(--justify-important);
+  color: var(--color-text-secondary);
+}
