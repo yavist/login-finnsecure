@@ -1,0 +1,39 @@
+html {
+  font-family: monospace;
+  background: #222;
+  color: #fff;
+  line-height: 1.25;
+  font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+td,
+th {
+  padding: 0.25rem 0.5rem;
+}
+
+th {
+  text-align: left;
+  text-decoration: underline;
+}
+
+a,
+a:visited {
+  color: rgb(77, 142, 226);
+}
+
+a:hover {
+  color: rgb(127, 180, 250);
+}
+
+.no-access > * {
+  color: gray;
+  cursor: not-allowed;
+}
